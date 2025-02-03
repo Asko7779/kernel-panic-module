@@ -1,6 +1,6 @@
 /*
     testing piece of code for a "kernel panic" module
-    - outputs the kernel panic message and halts all processes
+    - outputs a kernel panic message and halts all processes
     - still an early version of the actual module that I'll use
 */
 
@@ -14,11 +14,15 @@ constexpr int SCREEN_H = 25;
 
 constexpr uint8_t BG = 0x0F;    // "white on black" text constant
 
+
+
+// string output system, cut off the integer part
+
 class VGA {
 public:
     volatile uint16_t *vga_buffer;
     VGA() : vga_buffer(reinterpret_cast<uint16_t*>(VGA_A)) {}
-    void outputString(const char* str, int col, int row, uint8_t attr) {
+    void outputString(const char* str, int col, int row, uint8_t attr) {     
         int offset = row * SCREEN_W + col;
         for (int i = 0; str[i] != '\0'; i++) {
             vga_buffer[offset + i] = (attr << 8) | str[i];
