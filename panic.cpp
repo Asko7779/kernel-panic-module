@@ -15,7 +15,7 @@ constexpr int SCREEN_H = 25;
 constexpr uint8_t BG = 0x0F;    // "white on black" text constant
 
 
-// string output system, i cut off the integer part
+// string output system, I cut off the integer part
 
 class VGA {
 public:
