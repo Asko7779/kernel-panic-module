@@ -4,6 +4,7 @@
     - still an early version of the actual module that I'll use
 */
 
+
 #include <stdint.h>
 
 // declares the VGA address, width and height of the VGA window
