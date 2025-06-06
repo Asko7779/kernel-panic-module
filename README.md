@@ -1,4 +1,4 @@
-a simple, experimental kernel panic module written in C++. Built for my OS projects, learning, and kinda just out of boredom
+A simple, experimental kernel panic module written in C++. Built for my OS projects, learning, and kinda just out of boredom
 
 ---
 
