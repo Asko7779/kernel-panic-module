@@ -33,7 +33,6 @@ public:
 /*
    kernel panic function
 */
-
 extern "C" void kernelPanic(){
     VGA vga;
     vga.outputString("[!] Kernel panic", 1,1, BG);
